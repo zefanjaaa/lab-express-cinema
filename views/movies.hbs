@@ -1,0 +1,20 @@
+{{#each result}}
+<div>
+<img src="{{image}}" alt="image">
+
+<h2>{{title}}</h2>
+
+
+
+<button>
+    <a href="/movies/{{_id}}">see more</a>
+</button>
+
+<form action="/movies/{{_id}}">
+<button>See More</button>
+</form>
+</div>
+{{/each}}
+
+
+<h1> hello</h1>

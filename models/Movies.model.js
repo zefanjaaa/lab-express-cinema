@@ -9,3 +9,5 @@ const movieSchema = new Schema({
   showtimes: Array,
   image: String,
 });
+
+module.exports = model("movies", movieSchema);

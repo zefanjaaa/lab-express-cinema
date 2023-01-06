@@ -1,4 +1,37 @@
-<div>
-{{title}}
+<div id="movieDetail">
+  {{! <form action="/movies" name="goBackBtn" ></form>
+        <button>Go back</button>
+    </form>     }}
+
+  <form action="/movies">
+    <button id="goBackBtn">Go Back</button>
+  </form>
+  {{! <button id="goBackBtn">
+    <a href="/movies">Go Back</a>
+  </button> }}
+  <div id="moviePoster">
+    <img src="{{image}}" alt="movie poster" />
+
+  </div>
+
+  <div id="movieDescription">
+    <h3>{{title}}</h3>
+    <h3>Director: {{director}}</h3>
+
+    <p>Stars:
+
+      {{#each stars}}
+        <ul>
+          <li>
+            {{this}}
+          </li>
+        </ul>
+      {{/each}}
+
+    </p>
+    <p>{{description}}</p>
+
+    <p>{{showtimes}}</p>
+  </div>
 
 </div>

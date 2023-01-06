@@ -1,4 +1,5 @@
 const express = require("express");
+const MoviesModel = require("../models/Movies.model");
 const router = express.Router();
 const MovieModel = require("../models/Movies.model");
 /* GET home page */
@@ -15,4 +16,11 @@ router.get("/movies/:id", (req, res, next) => {
     res.render("moviedetailed", result);
   });
 });
+
+router.get("/moviesdetailed", (req, res) => {
+  MoviesModel.find().then((result) => {
+    res.render("movies", result);
+  });
+});
+
 module.exports = router;

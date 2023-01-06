@@ -1,20 +1,18 @@
-{{#each result}}
 <div>
-<img src="{{image}}" alt="image">
+  <h1>Ironhack Cinema</h1>
+  <h3>Click on the movie to check the showtimes</h3>
+  <div id="individualFilms">
+    {{#each result}}
+      <div id="filmCard">
+        <img src="{{image}}" alt="image" />
 
-<h2>{{title}}</h2>
+        <h4>{{title}}</h4>
 
+        <form action="/movies/{{_id}}">
+          <button>See More</button>
+        </form>
 
-
-<button>
-    <a href="/movies/{{_id}}">see more</a>
-</button>
-
-<form action="/movies/{{_id}}">
-<button>See More</button>
-</form>
+      </div>
+    {{/each}}
+  </div>
 </div>
-{{/each}}
-
-
-<h1> hello</h1>

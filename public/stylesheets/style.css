@@ -11,7 +11,7 @@ section {
   background-image: url(/images/cinema.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 #homepage {
@@ -81,7 +81,7 @@ section {
 }
 
 #individualFilms {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -91,7 +91,13 @@ section {
   gap: 10px 20px;
   row-gap: 10px;
   column-gap: 20px;
-  margin: 10px;
+  margin: 10px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  gap: 115px;
+  text-align: center;
 }
 
 #individualFilms button {
@@ -109,7 +115,7 @@ section {
 }
 
 #allMovies h1 {
-  color:rgb(107, 168, 148)
+  color: rgb(107, 168, 148);
 }
 
 #filmCard {
